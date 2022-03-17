@@ -1,0 +1,22 @@
+{
+  "name": "slackmusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"browser-sync start --server --files \"scss/*.css\" \"*.html\" \"screens/*.html\" \"js/*.js\"\", \"sass --watch \"scss/\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belchushka/SlackMusic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belchushka/SlackMusic/issues"
+  },
+  "homepage": "https://github.com/belchushka/SlackMusic#readme",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
