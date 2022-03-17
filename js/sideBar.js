@@ -8,5 +8,17 @@ let sideBarActive = false
 sideMenuToggler.onclick = ()=>{
     sideBarActive = !sideBarActive
     sideBar.classList.toggle("active")
+    const clickHandler = (ev)=>{
+        if (ev.path.indexOf(sideBar) === -1){
+            sideBar.classList.remove("active")
+            sideBarActive=false
+        }
+    }
+    if (sideBarActive){
+        window.addEventListener("click", clickHandler, {capture:true})
+    }else{
+        window.removeEventListener("click", clickHandler)
+
+    }
 }
 
