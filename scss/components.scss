@@ -46,7 +46,7 @@ body {
   }
 
   .content {
-
+    margin-top: 40px;
   }
 }
 
@@ -157,4 +157,13 @@ header {
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+}
+
+.playBtn {
+  width: 48px;
+  height: 48px;
+  background: #1ed760;
+  border-radius: 50%;
+  cursor: pointer;
+  @include animated()
 }

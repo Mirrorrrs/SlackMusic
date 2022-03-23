@@ -41,6 +41,10 @@ body {
   font-family: "HelveticaNeueCyr";
   font-size: 26px;
 }
+.block .content {
+  margin-top: 40px;
+}
+
 .sideBar {
   position: fixed;
   top: 0;
@@ -132,6 +136,15 @@ header nav ul li svg {
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+}
+
+.playBtn {
+  width: 48px;
+  height: 48px;
+  background: #1ed760;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 /*# sourceMappingURL=components.css.map */

@@ -1,3 +1,52 @@
-
+@import "../fonts/Halvatica/stylesheet.css";
+.recs .cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -20px;
+}
+.recs .cards .recCard {
+  margin-left: 30px;
+  margin-top: 20px;
+  width: calc(25% - 30px);
+  overflow: hidden;
+  position: relative;
+  padding-right: 20px;
+  border-radius: 5px;
+  display: flex;
+  background: rgba(158, 158, 158, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(6.6px);
+  transition: 0.2s;
+}
+.recs .cards .recCard .playBtn {
+  opacity: 0;
+}
+.recs .cards .recCard:hover {
+  background: rgba(221, 221, 221, 0.2);
+}
+.recs .cards .recCard:hover .playBtn {
+  opacity: 1;
+}
+.recs .cards .recCard img {
+  width: 80px;
+  height: 80px;
+}
+.recs .cards .recCard .cardData {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+.recs .cards .recCard .cardData .title {
+  font-family: "HelveticaNeueCyr";
+  font-size: 20px;
+  color: white;
+  margin-left: 20px;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=index.css.map */
