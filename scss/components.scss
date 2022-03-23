@@ -167,3 +167,51 @@ header {
   cursor: pointer;
   @include animated()
 }
+
+.albumCard {
+  padding: 20px;
+  border-radius: 8px;
+  background: #181818;
+  min-height: 290px;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+  .title {
+    font-family: $halvetica;
+    font-size: 17px;
+    color:white;
+    margin-top: 12px;
+    position: relative;
+    white-space: nowrap; //запрет переноса
+    overflow: hidden; //ограничение области видимости
+    text-overflow: ellipsis; //эффект, который применяется если текст выходит за область видимости
+  }
+
+  span {
+    font-family: $halvetica;
+    font-size: 12px;
+    color: #b3b3b3;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .albumCardContent {
+    position: relative;
+    .playBtn {
+      position: absolute;
+      bottom:-10px;
+      right: 10px;
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    .albumCardContent {
+      .playBtn {
+        opacity: 1;
+        bottom:10px
+      }
+    }
+  }
+}

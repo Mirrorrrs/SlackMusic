@@ -147,4 +147,45 @@ header nav ul li svg {
   transition: 0.2s;
 }
 
+.albumCard {
+  padding: 20px;
+  border-radius: 8px;
+  background: #181818;
+  min-height: 290px;
+  cursor: pointer;
+}
+.albumCard img {
+  width: 100%;
+}
+.albumCard .title {
+  font-family: "HelveticaNeueCyr";
+  font-size: 17px;
+  color: white;
+  margin-top: 12px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.albumCard span {
+  font-family: "HelveticaNeueCyr";
+  font-size: 12px;
+  color: #b3b3b3;
+  display: block;
+  margin-top: 10px;
+}
+.albumCard .albumCardContent {
+  position: relative;
+}
+.albumCard .albumCardContent .playBtn {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  opacity: 0;
+}
+.albumCard:hover .albumCardContent .playBtn {
+  opacity: 1;
+  bottom: 10px;
+}
+
 /*# sourceMappingURL=components.css.map */
