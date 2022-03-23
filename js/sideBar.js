@@ -6,6 +6,7 @@ let sideBarActive = false
 // el.classList.toggle - если переданный в скобках класс есть, то он убирается, если нет, то добавляется
 
 sideMenuToggler.onclick = ()=>{
+    console.log("button click");
     sideBarActive = !sideBarActive
     sideBar.classList.toggle("active")
     const clickHandler = (ev)=>{
@@ -18,7 +19,6 @@ sideMenuToggler.onclick = ()=>{
         window.addEventListener("click", clickHandler, {capture:true})
     }else{
         window.removeEventListener("click", clickHandler)
-
     }
 }
 

@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 * {
   margin: 0;
@@ -36,14 +37,14 @@ body {
 .block {
   width: 100%;
   margin: 40px 0 20px 0;
-  .title {
-    h3 {
-
-    }
-    .navButton {
-
+  .header {
+    .title {
+      color: white;
+      font-family: $halvetica;
+      font-size: 26px;
     }
   }
+
   .content {
 
   }
@@ -67,8 +68,10 @@ body {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 20vw;
+  padding: 20px 40px 20px 20px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: black;
   z-index: 1000;
   transition: .2s;
@@ -76,13 +79,32 @@ body {
     left: 0;
   }
   .logo {
+    width: 129px;
+    height: 38px;
+  }
+  .sideBarContent {
+    flex-grow: 1;
+  }
 
+  nav {
+    margin-top: 40px;
+    li {
+      color: white;
+      font-family: $halvetica;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      @include animated(); //=transition: .2s
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
 
 header {
-  padding: 10px 0;
+  padding: 20px 0;
   .container {
     display: flex;
     justify-content: space-between;

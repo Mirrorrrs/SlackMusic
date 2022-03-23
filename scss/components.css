@@ -36,12 +36,19 @@ body {
   width: 100%;
   margin: 40px 0 20px 0;
 }
+.block .header .title {
+  color: white;
+  font-family: "HelveticaNeueCyr";
+  font-size: 26px;
+}
 .sideBar {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 20vw;
+  padding: 20px 40px 20px 20px;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   background: black;
   z-index: 1000;
   transition: 0.2s;
@@ -49,8 +56,30 @@ body {
 .sideBar.active {
   left: 0;
 }
+.sideBar .logo {
+  width: 129px;
+  height: 38px;
+}
+.sideBar .sideBarContent {
+  flex-grow: 1;
+}
+.sideBar nav {
+  margin-top: 40px;
+}
+.sideBar nav li {
+  color: white;
+  font-family: "HelveticaNeueCyr";
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sideBar nav li:hover {
+  text-decoration: underline;
+}
+
 header {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 header .container {
   display: flex;
