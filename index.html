@@ -12,6 +12,33 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+<div class="player">
+    <div class="container">
+        <div class="logo">
+            <img src="https://i.scdn.co/image/ab67616d0000b273e63e654613de84908407529e" alt="">
+        </div>
+        <div class="controls">
+            <div class="btns">
+                <button id="prevBtn"><svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 hDgDGI"><path d="M3.3 1a.7.7 0 01.7.7v5.15l9.95-5.744a.7.7 0 011.05.606v12.575a.7.7 0 01-1.05.607L4 9.149V14.3a.7.7 0 01-.7.7H1.7a.7.7 0 01-.7-.7V1.7a.7.7 0 01.7-.7h1.6z"></path></svg></button>
+                <button id="playBtn" class="playBtn" onclick="playAudio()">
+                    <svg role="img" height="18" width="18" viewBox="0 0 24 24">
+                        <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                    </svg>
+                    <svg  role="img" height="18" width="18" viewBox="0 0 16 16"><path d="M2.7 1a.7.7 0 00-.7.7v12.6a.7.7 0 00.7.7h2.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7H2.7zm8 0a.7.7 0 00-.7.7v12.6a.7.7 0 00.7.7h2.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7h-2.6z"></path></svg>
+                </button>
+                <button id="nextBtn"><svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 hDgDGI"><path d="M12.7 1a.7.7 0 00-.7.7v5.15L2.05 1.107A.7.7 0 001 1.712v12.575a.7.7 0 001.05.607L12 9.149V14.3a.7.7 0 00.7.7h1.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7h-1.6z"></path></svg></button>
+            </div>
+            <div class="track">
+                <span id="startTime">3:13</span>
+                <input type="range" name="" id="timeControl">
+                <span id="totalTime">3:20</span>
+            </div>
+        </div>
+        <div class="volume">
+            <input type="range" name="" id="">
+        </div>
+    </div>
+</div>
 <div class="contentWrapper">
     <div class="sideBar" id="sideBar">
         <div class="sideBarContent">

@@ -1,6 +1,8 @@
 const body = document.body
 const timeTitle = document.querySelector("#timeTitle")
+const playerPlay = document.querySelector("#playBtn")
 let currentDateHours = new Date().getHours()
+let isAudioPlaying = false
 
 
 const getRandomRange = (max) => {
@@ -20,4 +22,20 @@ const useEffect = () => {
         timeTitle.innerHTML = "Спокойной ночи"
     }
 }
+
+const audio = new Audio("../testAudio/test.mp3")
+
+function playAudio(){
+    if (isAudioPlaying){
+        audio.pause()
+        isAudioPlaying=false
+        playerPlay.classList.remove("active")
+    }else{
+        audio.play()
+        isAudioPlaying=true
+        playerPlay.classList.add("active")
+
+    }
+}
+
 useEffect()

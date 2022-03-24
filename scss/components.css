@@ -188,4 +188,67 @@ header nav ul li svg {
   bottom: 10px;
 }
 
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: #121212;
+}
+.player .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.player .logo {
+  height: 56px;
+}
+.player .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.player .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player .controls #prevBtn, .player .controls #nextBtn {
+  fill: #b3b3b3;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.player .controls #prevBtn:hover, .player .controls #nextBtn:hover {
+  fill: white;
+}
+.player .controls .playBtn {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+}
+.player .controls .playBtn svg:nth-child(2) {
+  display: none;
+}
+.player .controls .playBtn.active svg:nth-child(2) {
+  display: block;
+}
+.player .controls .playBtn.active svg:nth-child(1) {
+  display: none;
+}
+.player .track {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.player .track input {
+  width: 600px;
+}
+.player .track span {
+  color: white;
+  font-family: "HelveticaNeueCyr";
+  font-size: 12px;
+  margin: 0 20px;
+}
+
 /*# sourceMappingURL=components.css.map */
