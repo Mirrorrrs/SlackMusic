@@ -1,4 +1,4 @@
-
+import {getAlbums} from "./utils.mjs";
 
 const body = document.body
 const timeTitle = document.querySelector("#timeTitle")
@@ -58,4 +58,6 @@ function setAudioTime(el){
 }
 
 
-useEffect()
+useEffect(async ()=>{
+    const albums = await getAlbums()
+})

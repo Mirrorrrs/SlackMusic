@@ -296,3 +296,24 @@ header {
     }
   }
 }
+
+.fileSelect {
+  display: flex;
+  align-items: center;
+  font-family: $halvetica;
+
+  input {
+    display: none;
+  }
+  .content {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: #3498db;
+    cursor: pointer;
+    margin-left: 10px;
+    span {
+      color: white;
+    }
+  }
+}

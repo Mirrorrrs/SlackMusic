@@ -6,20 +6,38 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create Album</title>
+    <link rel="stylesheet" href="../scss/createForm.css">
+    <script type="module" src="../js/createForm.js"></script>
 </head>
 <body>
 <main>
-    <form action="">
-        <input type="text" name="albumName">
-        <input type="file" name="albumIcon">
-        <button>Add song</button>
-        <div class="songs">
-            <div class="song">
-                <input type="text" name="songName">
-                <input type="file" name="songFile">
+    <div class="container">
+        <form action="" id="createForm">
+            <h1>Add Album</h1>
+            <input type="text" name="albumName" placeholder="Название альбома">
+            <label class="fileSelect">
+                <input type="file" name="albumIcon">
+                Иконка альбома
+                <span class="content">
+                    <span>Выбрать файл</span>
+                </span>
+            </label>
+            <div class="songs">
+                <div class="song">
+                    <input type="text" name="songName">
+                    <label class="fileSelect">
+                        <input type="file" name="songFile">
+                        Аудио
+                        <span class="content">
+                            <span>Выбрать файл</span>
+                        </span>
+                    </label>
+                </div>
             </div>
-        </div>
-    </form>
+            <button>Создать альбом</button>
+
+        </form>
+    </div>
 </main>
 </body>
 </html>
