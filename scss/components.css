@@ -152,15 +152,37 @@ header nav ul li svg {
   transition: 0.2s;
 }
 
+#albums {
+  margin-left: -20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .albumCard {
+  width: calc(12.5% - 20px);
+  margin-left: 20px;
   padding: 20px;
   border-radius: 8px;
   background: #181818;
-  min-height: 290px;
+  min-height: 320px;
   cursor: pointer;
 }
-.albumCard img {
+.albumCard .icon {
   width: 100%;
+  position: relative;
+}
+.albumCard .icon:before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.albumCard .icon img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
 }
 .albumCard .title {
   font-family: "HelveticaNeueCyr";

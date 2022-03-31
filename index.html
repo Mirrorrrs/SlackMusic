@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="scss/components.css">
     <script src="js/sideBar.js" defer></script>
     <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
 </head>
 <body>
 <div class="player">
@@ -20,7 +21,7 @@
         <div class="controls">
             <div class="btns">
                 <button id="prevBtn"><svg role="img" height="16" width="16" viewBox="0 0 16 16" class="Svg-sc-1bi12j5-0 hDgDGI"><path d="M3.3 1a.7.7 0 01.7.7v5.15l9.95-5.744a.7.7 0 011.05.606v12.575a.7.7 0 01-1.05.607L4 9.149V14.3a.7.7 0 01-.7.7H1.7a.7.7 0 01-.7-.7V1.7a.7.7 0 01.7-.7h1.6z"></path></svg></button>
-                <button id="playBtn" class="playBtn" onclick="playAudio()">
+                <button id="playBtn" class="playBtn" onclick="toggleAudio(this)">
                     <svg role="img" height="18" width="18" viewBox="0 0 24 24">
                         <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
                     </svg>
@@ -215,30 +216,9 @@
                 <div class="header">
                     <h3 class="title">Слушаем дальше</h3>
                 </div>
-                <div class="content">
-                    <div class="albumCards">
-                        <div class="albumCard">
-                            <div class="albumCardContent">
-                                <div class="icon">
-                                    <img src="https://i.scdn.co/image/ab67616d00001e02745e8104cd9d030670ea321f" alt="">
-                                </div>
-                                <button class="playBtn">
-                                    <svg role="img" height="24" width="24" viewBox="0 0 24 24"
-                                         class="Svg-sc-1bi12j5-0 hDgDGI">
-                                        <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-                                    </svg>
-                                </button>
-                            </div>
-
-                            <h4 class="title">
-                                Everything Not Saved Will Be Lost Part I
-                            </h4>
-                            <span>Foals</span>
+                <div class="content" id="albums">
 
 
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
