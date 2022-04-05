@@ -36,7 +36,8 @@ function createAlbumCard(name, date, icon,index) {
     `, "text/html").body.querySelector(".albumCard")
     cardTemplate.querySelector(`#${playBtnId}`).onclick = ()=>{
         const songs = albums[index].songs
-        audioPlayer.playAudio(`http://${songs[0].fileLink}`, `http://${albums[index].icon}`)
+        let playlist = songs.map(el=>`http://${el.fileLink}`)
+        audioPlayer.playAudio(playlist, `http://${albums[index].icon}`)
     }
     return cardTemplate
 }
