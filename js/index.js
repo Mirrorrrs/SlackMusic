@@ -1,23 +1,17 @@
-import {AudioPlayer, getAlbums, useEffectCorrect} from "./utils.mjs";
-import {playerPlayBtn, toggleAudio} from "./player.mjs";
-let isAudioPlaying = false
-let audioWatcher = null
-const playerPlay = document.querySelector("#playBtn")
-const timeControl = document.querySelector("#timeControl")
-const playTime = document.querySelector("#startTime")
+import {getAlbums, useEffectCorrect} from "./utils.mjs";
+import {AudioPlayer} from "./player.mjs";
 const albumsNode = document.querySelector("#albums")
-const audio = new AudioPlayer()
 let albums = null
+const audioPlayer = new AudioPlayer()
 
 function playAudio(albumId) {
     const songs = albums[albumId].songs
-    audio.setSrc(`http://${songs[0].fileLink}`)
+    audio.setSrc()
     audio.playAudio()
 }
 
-playerPlayBtn.onclick = toggleAudio.bind(this,audio,playerPlayBtn)
 
-function createAlbumCard(name, date, icon,index, playAudio) {
+function createAlbumCard(name, date, icon,index) {
     const playBtnId = `album_${index}`
     const cardTemplate = new DOMParser().parseFromString(`
                 <div class="albumCards">
@@ -41,7 +35,8 @@ function createAlbumCard(name, date, icon,index, playAudio) {
                 </div>
     `, "text/html").body.querySelector(".albumCard")
     cardTemplate.querySelector(`#${playBtnId}`).onclick = ()=>{
-        playAudio()
+        const songs = albums[index].songs
+        audioPlayer.playAudio(`http://${songs[0].fileLink}`, `http://${albums[index].icon}`)
     }
     return cardTemplate
 }
@@ -50,8 +45,10 @@ useEffectCorrect(async () => {
     let data = (await getAlbums()).data
     albums = data
     data.forEach((album, index) => {
-        const albumCard = createAlbumCard(album.name, album.created_at, album.icon,index, playAudio.bind(this,index))
+        const albumCard = createAlbumCard(album.name, album.created_at, album.icon,index)
         albumsNode.append(albumCard)
     })
 })
+
+
 

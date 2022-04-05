@@ -229,6 +229,7 @@ header nav ul li svg {
   align-items: center;
 }
 .player .logo {
+  width: 56px;
   height: 56px;
 }
 .player .logo img {
