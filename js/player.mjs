@@ -8,6 +8,8 @@ export class AudioPlayer {
         this.currentSongId = 0
         this.timeline = player.querySelector("#timeControl")
         this.volumeControll = player.querySelector("#volumeControl")
+        this.nextBtn = player.querySelector("#nextBtn")
+        this.prevBtn = player.querySelector("#prevBtn")
         this.songImage = player.querySelector("#songImage")
         this.playBtn = player.querySelector("#playBtn")
         this.startTimeIndicator = player.querySelector("#startTime")
@@ -28,6 +30,8 @@ export class AudioPlayer {
             this.setTotalTime(ev.target.duration)
             this.setStartTime(ev.target.currentTime)
         }
+        this.nextBtn.onclick = this.nextSong.bind(this)
+        this.prevBtn.onclick = this.prevSong.bind(this)
         this.audio.onended = ()=>{
             this.nextSong()
         }
@@ -52,6 +56,7 @@ export class AudioPlayer {
     }
 
     nextSong() {
+        console.log(this.playList);
         this.currentSongId + 1 < this.playList.length ? this.currentSongId += 1 : this.currentSongId += 0
         this.startAudio()
     }
