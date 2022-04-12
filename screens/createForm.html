@@ -8,37 +8,70 @@
     <title>Create Album</title>
     <link rel="stylesheet" href="../scss/createForm.css">
     <script type="module" src="../js/createForm.js"></script>
+    <script type="module" src="../js/main.js" defer></script>
 </head>
 <body>
 <main>
     <div class="container">
-        <form action="" id="createForm">
-            <h1>Add Album</h1>
-            <input type="text" name="albumName" placeholder="Название альбома">
-            <label class="fileSelect">
-                <input type="file" name="albumIcon">
-                Иконка альбома
-                <span class="content">
-                    <span>Выбрать файл</span>
-                </span>
-            </label>
-            <div class="songs" id="songs">
-                <div class="song">
-                    <input type="text" name="songName">
-                    <label class="fileSelect">
-                        <input type="file" name="songFile">
-                        Аудио
-                        <span class="content">
-                            <span>Выбрать файл</span>
-                        </span>
-                    </label>
+        <div class="formWrapper">
+            <form action="" id="createForm">
+                <label for="albumName">Название альбома</label>
+                <input id="albumName" type="text" name="albumName">
+                <label class="fileSelect" id="albumIconSelect">
+                    <input type="file" name="albumIcon">
+                    <div class="rectImg hidden">
+                        <img src="" alt="">
+                    </div>
+                    <span>
+                        Иконка альбома
+                    </span>
+                </label>
+                <div id="addSongBtn">Добавить песню</div>
+                <div class="songs">
+                    <div class="song">
+                        <label class="songFile">
+                            <input type="file" name="songFile" id="">
+                            <span>
+                                +
+                            </span>
+                        </label>
+                        <input type="text" name="songName" placeholder="Название песни"/>
+                    </div>
                 </div>
-                <div class="addSong" id="addSong">Добавить песню</div>
-            </div>
-            <button type="submit">Создать альбом</button>
+                <button class="customButton">Создать альбом</button>
+            </form>
+        </div>
 
-        </form>
     </div>
+
+<!--    <div class="container">-->
+<!--        <form action="" id="createForm">-->
+<!--            <h1>Add Album</h1>-->
+<!--            <input type="text" name="albumName" placeholder="Название альбома">-->
+<!--            <label class="fileSelect">-->
+<!--                <input type="file" name="albumIcon">-->
+<!--                Иконка альбома-->
+<!--                <span class="content">-->
+<!--                    <span>Выбрать файл</span>-->
+<!--                </span>-->
+<!--            </label>-->
+<!--            <div class="songs" id="songs">-->
+<!--                <div class="song">-->
+<!--                    <input type="text" name="songName">-->
+<!--                    <label class="fileSelect">-->
+<!--                        <input type="file" name="songFile">-->
+<!--                        Аудио-->
+<!--                        <span class="content">-->
+<!--                            <span>Выбрать файл</span>-->
+<!--                        </span>-->
+<!--                    </label>-->
+<!--                </div>-->
+<!--                <div class="addSong" id="addSong">Добавить песню</div>-->
+<!--            </div>-->
+<!--            <button type="submit">Создать альбом</button>-->
+
+<!--        </form>-->
+<!--    </div>-->
 </main>
 </body>
 </html>

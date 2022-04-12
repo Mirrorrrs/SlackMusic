@@ -22,8 +22,8 @@ button, input, textarea {
 }
 
 body {
-  background: black;
-  background: linear-gradient(0deg, black 75%, #d01820 100%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 75%, rgb(208, 24, 32) 100%);
 }
 
 .contentWrapper {
@@ -302,55 +302,126 @@ header nav ul li svg {
 
 main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 main .container {
   margin: 0;
   display: flex;
   justify-content: center;
-}
-
-form {
-  margin-top: 20px;
-  padding: 25px;
-  border-radius: 8px;
-  background: white;
-  align-self: flex-start;
-  max-width: 600px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
   align-items: center;
 }
-form h1 {
-  font-family: "HelveticaNeueCyr";
-  text-transform: uppercase;
-  font-weight: 800;
-}
-form input[type=text] {
-  width: 100%;
-  border: 1px solid black;
+main .container .formWrapper {
+  background: white;
   margin-top: 20px;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 30%;
+  width: 100%;
 }
-form .fileSelect {
+main .container .formWrapper form #addSongBtn, main .container .formWrapper form button {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  margin-top: 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+main .container .formWrapper form .fileSelect {
+  margin-top: 8px;
+  display: block;
+}
+main .container .formWrapper form .fileSelect .rectImg {
+  width: 100%;
+  position: relative;
+  margin-bottom: 8px;
+}
+main .container .formWrapper form .fileSelect .rectImg img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+main .container .formWrapper form .fileSelect .rectImg:before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+main .container .formWrapper form .fileSelect .rectImg.hidden {
+  display: none;
+}
+main .container .formWrapper form .fileSelect input {
+  display: none;
+}
+main .container .formWrapper form .fileSelect span {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+main .container .formWrapper form .fileSelect span:hover {
+  color: black;
+  border: 1px solid black;
+}
+main .container .formWrapper form input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  transition: 0.2s;
+}
+main .container .formWrapper form input:focus {
+  border: 1px solid black;
+}
+main .container .formWrapper form input.error {
+  border: 1px solid red;
+}
+main .container .formWrapper form label {
+  color: rgba(0, 0, 0, 0.66);
+  font-size: 12px;
+  font-family: Arial;
+}
+main .container .formWrapper form .songs .song {
+  display: flex;
+  width: 100%;
   margin-top: 10px;
 }
-form button {
-  margin-top: 20px;
-  background: black;
-  color: white;
-  padding: 16px 20px;
-  font-family: "HelveticaNeueCyr";
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 16px;
+main .container .formWrapper form .songs .song input {
+  margin-top: 0;
 }
-form .songs {
+main .container .formWrapper form .songs .song .songFile input[type=file] {
+  display: none;
+}
+main .container .formWrapper form .songs .song .songFile span {
+  width: 48px;
+  height: 48px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  color: black;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 8px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+main .container .formWrapper form .songs .song .songFile span.selected {
+  border: 2px solid #2ecc71;
+}
+main .container .formWrapper form .songs .song .songFile span.error {
+  border: 2px solid red;
 }
 
 /*# sourceMappingURL=createForm.css.map */
